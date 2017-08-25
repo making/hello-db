@@ -1,7 +1,8 @@
 applications:
 - name: message-api
-  buildpack: java_buildpack_offline
+  buildpack: https://github.com/cloudfoundry/java-buildpack#v3.19
+  memory: 512m
   path: target/hello-db-0.0.1-SNAPSHOT.jar
   services:
   - hello-db
-  - hello-mf
+  # - hello-mf
